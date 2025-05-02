@@ -40,25 +40,30 @@
       <!--radio query -->
       <p>Query Type</p>
       <div class="radio-card">
-        <input type="radio" name="radio" id="seneral">
-        <label for="seneral">General Enquiry</label>
+        <input type="radio" name="radio" id="general">
+        <label for="general">General Enquiry</label>
         <input type="radio" name="radio" id="support">
         <label for="support">Support Request</label>
       </div>
       <p class="p">Message</p>
 
       <textarea type="text" id="txt-area" required></textarea><br>
+      <div class="check-box-area">
 
-      <input type="checkbox" name="checkbox" id="t&c-line">
-      <label for="t&c-line">I consent to being contacted by the team
+        <input type="checkbox" name="checkbox" id="t&c-line" required>
+        <label for="t&c-line">I consent to being contacted by the team
         </label>
+      </div>
       <br>
-      <button type="submit">Submit</button>
+      <button class="btn-1"type="submit">Submit</button>
 
     </form>
 
   </div>
-
+  <div class="message">
+    <h3><img src="/assets/images/icon-success-check.svg" alt="">Message Sent!</h3>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
 
 
 
@@ -66,18 +71,12 @@
 
   <!-- Message
   This field is required
-
   
-
   Submit
 
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+ -->
+<script src="index.js"></script>
 </body>
 
 </html>

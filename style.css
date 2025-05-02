@@ -39,13 +39,19 @@ label input {
   margin-top: 0.5rem;
   border-radius: 5px;
   border: 0.5px solid rgb(40, 40, 40);
-  outline: none;
   transition: 0.2s;
+  /* border: 2px solid hsl(148, 81%, 25%); */
+  
 }
-label input:hover{
-  border:2px solid hsl(148, 81%, 25%);
+label input:hover {
+  border: 2px solid hsl(148, 81%, 25%);
+  cursor:pointer ;
 }
-.radio-card {
+label input:focus{
+  outline: 2px hsl(148, 81%, 25%);
+}
+
+.radio-card{
   display: flex;
   flex-direction: column;
 }
@@ -63,11 +69,11 @@ label input:hover{
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  transition: .5s;
+  transition: 0.2s;
 }
 
 .radio-card label::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 15px;
   top: 50%;
@@ -78,13 +84,13 @@ label input:hover{
   border-radius: 50%;
   background-color: white;
   box-sizing: border-box;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .radio-card input[type="radio"]:checked + label {
-  background-color:  hsl(146, 60%, 90%);
+  background-color: hsl(146, 60%, 90%);
   color: rgb(0, 0, 0);
-  border:2px solid hsl(148, 81%, 25%);
+  border: 2px solid hsl(148, 81%, 25%);
 }
 
 .radio-card input[type="radio"]:checked + label::before {
@@ -93,21 +99,122 @@ label input:hover{
   width: 10px;
   border: 10px double hsl(169, 86%, 27%);
 }
-.radio-card label:hover{
-  border:2px solid hsl(148, 81%, 25%);
+.radio-card label:hover {
+  border: 1px solid hsl(148, 100%, 24%);
 }
-.p{
+.p {
   margin: 6px 0px;
 }
-textarea{
+textarea {
   width: 100%;
   height: 200px;
   max-height: 250px;
   border-radius: 5px;
   resize: vertical;
   outline: none;
+  cursor:pointer ;
+  padding: 10px;
+  font-size: 1em;
+}
+textarea:hover {
+  border: 2px solid hsl(148, 81%, 25%);
+}
+.check-box-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
+}
+.check-box-area input {
+  cursor: pointer;
+  width: 24px;
+  height: 20px;
+  accent-color: hsl(135, 31%, 39%);
+}
 
+.check-box-area label {
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: 10px;
 }
-textarea:hover{
-  border: 2px solid hsl(148, 81%, 25%);;
+.btn-1 {
+  width: 100%;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color:hsl(169, 82%, 27%);
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
 }
+.btn-1:hover{
+  background-color:  hsl(187, 24%, 22%);
+}
+.btn-1:active{
+  background-color:  hsl(154, 33%, 27%);
+}
+.message{
+  position: fixed;
+  display: none;
+  background-color: white;
+  left: 25%;
+  max-width: 50%;
+  width: 240px;
+  padding: 20px 20px;
+  margin: 10px 0px;
+  background-color:  hsl(187, 24%, 22%);
+  color: white;
+  border-radius: 10px;
+  z-index: 999;
+  
+}
+.message h3{
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  font-size:1em;
+  animation: appear-top 0.5s ease-in-out forwards;
+}
+.message h3 img{
+  margin-right: 5px;
+  width: 16px;
+  animation: appear-top 0.5s ease-in-out forwards;
+}
+.message p{
+  font-size: 0.9em;
+  animation: appear-top 0.6s ease-in-out forwards;
+}
+.message.active{
+  display: block;
+  animation: appear-top 0.3s ease-in-out forwards;
+}
+.message.hidden{
+  animation: out 0.5s ease-out forwards;
+}
+@keyframes appear-top {
+  from {
+    transform: translateY(-50%) scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes out {
+  from{
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+    
+  }
+  to{
+    transform: translateY(-50%) scale(0.2);
+    opacity: 0;
+    display: hidden;
+  }
+}
+
