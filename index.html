@@ -37,21 +37,21 @@
         <input type="text" id="email" required>
       </label>
       <br>
-      <!-- query -->
-      <div class="radio-group">
-        <input type="radio" id="general-enquiry" name="option" value="General Enquiry" required>
-        <label for="general-enquiry">General Enquiry</label>
-
-        <input type="radio" id="support-request" name="option" value="Support Request" required>
-        <label for="support-request">Support Request</label>
+      <!--radio query -->
+      <p>Query Type</p>
+      <div class="radio-card">
+        <input type="radio" name="radio" id="seneral">
+        <label for="seneral">General Enquiry</label>
+        <input type="radio" name="radio" id="support">
+        <label for="support">Support Request</label>
       </div>
-
+      <p class="p">Message</p>
 
       <textarea type="text" id="txt-area" required></textarea><br>
 
       <input type="checkbox" name="checkbox" id="t&c-line">
       <label for="t&c-line">I consent to being contacted by the team
-        To submit this form, please consent to being contacted</label>
+        </label>
       <br>
       <button type="submit">Submit</button>
 
