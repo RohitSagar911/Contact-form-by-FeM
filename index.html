@@ -20,7 +20,7 @@
 <body>
   <div class="container">
     <h1>Contact Us</h1>
-    <form action="" class="contct-frm">
+    <form id="form" action="" class="contct-frm">
       <!-- name -->
       <label for="fname">
         <p>First Name</p>
@@ -40,18 +40,20 @@
       <!--radio query -->
       <p>Query Type</p>
       <div class="radio-card">
-        <input type="radio" name="radio" id="general">
-        <label for="general">General Enquiry</label>
-        <input type="radio" name="radio" id="support">
-        <label for="support">Support Request</label>
+        <input type="radio" name="radio" id="general" >
+        <label for="general" class="radio">General Enquiry</label>
+        <input type="radio" name="radio" id="support" >
+        <label for="support" class="radio">Support Request</label>
       </div>
+      <p class="q-error">Please select a Query</p>
       <p class="p">Message</p>
 
       <textarea type="text" id="txt-area" required></textarea><br>
       <div class="check-box-area">
 
         <input type="checkbox" name="checkbox" id="t&c-line" required>
-        <label for="t&c-line">I consent to being contacted by the team
+        <label for="t&c-line">
+          <p>I consent to being contacted by the team</p>
         </label>
       </div>
       <br>

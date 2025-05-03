@@ -71,6 +71,10 @@ label input:focus{
   font-size: 14px;
   transition: 0.2s;
 }
+.radio.error{
+  border: 1px solid red;
+  color: red;
+}
 
 .radio-card label::before {
   content: "";
@@ -93,6 +97,7 @@ label input:focus{
   border: 2px solid hsl(148, 81%, 25%);
 }
 
+
 .radio-card input[type="radio"]:checked + label::before {
   background-color: rgb(255, 255, 255);
   height: 10px;
@@ -104,6 +109,14 @@ label input:focus{
 }
 .p {
   margin: 6px 0px;
+}
+p::after{
+  content: "*";
+  margin-left: 2px;
+  /* background-color: green; */
+  color:hsl(142, 97%, 36%);
+  font-size: 16px;
+  
 }
 textarea {
   width: 100%;
@@ -214,7 +227,15 @@ textarea:hover {
   to{
     transform: translateY(-50%) scale(0.2);
     opacity: 0;
-    display: hidden;
+    display: none;
   }
+}
+.q-error,.q-error:after{
+  margin-top: 3px;
+  color: red;
+  visibility: hidden;
+}
+.q-error.active{
+  visibility: visible;
 }
 
