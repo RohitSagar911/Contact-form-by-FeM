@@ -23,41 +23,48 @@
     <form id="form" action="" class="contct-frm">
       <!-- name -->
       <label for="fname">
-        <p>First Name</p>
-        <input type="text" name="" id="fname" >
+        <p id="fname-label">First Name</p>
+        <input type="text" name="firstName" id="fname">
       </label>
-      <label foxr="lname">
-        <p>Last Name</p>
-        <input type="text" name="" id="lname" >
+      <span class="form-error">This field is required</span>
+      <label for="lname">
+        <p id="lname-label">Last Name</p>
+        <input type="text" name="LastName" id="lname">
       </label>
-
-      <!-- email -->
+      <span class="form-error">This field is required</span>
+      <!--email -->
       <label for="email">
-        <p>Email</p>
-        <input type="text" id="email" >
+        <p id="email-label">Email</p>
+        <input type="text" id="email" name="email">
       </label>
+      <span class="form-error">Please Enter the valid email address</span>
       <br>
       <!--radio query -->
       <p>Query Type</p>
       <div class="radio-card">
-        <input class="radio" type="radio" name="radio" id="general" >
-        <label for="general" class="radio">General Enquiry</label>
-        <input class="radio" type="radio" name="radio" id="support" >
-        <label for="support" class="radio">Support Request</label>
+        <input class="radio" type="radio" name="radio" id="general">
+        <label for="general" class="radio-el">General Enquiry</label>
+        <input class="radio" type="radio" name="radio" id="support">
+        <label for="support" class="radio-el">Support Request</label>
       </div>
-      <p class="q-error">Please select a Query</p>
+      <span class="form-error">Please select a Query</span>
+
+      <!-- textbox area -->
       <p class="p">Message</p>
 
-      <textarea type="text" id="txt-area" ></textarea><br>
+      <textarea type="text" id="txt-area" name="query"></textarea>
+      <span class="form-error">This field is required</span>
       <div class="check-box-area">
 
-        <input type="checkbox" name="checkbox" id="t&c-line" >
-        <label for="t&c-line">
-          <p>I consent to being contacted by the team</p>
+
+        <input type="checkbox" name="checkbox" id="concent" name="concent">
+        <label for="concent">
+            I concent being contected by Team.
         </label>
       </div>
+      <span class="form-error">To Submit this form, Please consent to be contacted</span>
       <br>
-      <button class="btn-1"type="submit">Submit</button>
+      <button class="btn-1" type="submit" id="submit-btn">Submit</button>
 
     </form>
 
@@ -67,18 +74,7 @@
     <p>Thanks for completing the form. We'll be in touch soon!</p>
   </div>
 
-
-
-
-
-  <!-- Message
-  This field is required
-  
-  Submit
-
-  Message Sent!
- -->
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
