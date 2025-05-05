@@ -22,8 +22,8 @@ A responsive, fully functional form built as part of a [Frontend Mentor](https:/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/form-project.git
-   cd form-project
+   git clone https://github.com/RohitSagar911/Contact-form-by-FeM.git
+   cd Contact-form-by-FeM
    ```
 
 2. Open `index.html` in your browser:
