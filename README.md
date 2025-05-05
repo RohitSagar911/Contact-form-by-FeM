@@ -36,7 +36,7 @@ A responsive, fully functional form built as part of a [Frontend Mentor](https:/
 
 ## 📸 Preview
 
-![Form Preview](/design/desktop-design.jpg)
+![Form Preview](/design)
 *A sleek and modern form with animation and validation.*
 
 ## 🔗 Live Demo
