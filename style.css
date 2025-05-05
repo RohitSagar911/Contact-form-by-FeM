@@ -6,7 +6,8 @@
 }
 body {
   background: hsl(148, 38%, 91%);
-  width: 320x;
+  width: 320px; 
+ padding: 40px; 
 }
 .container {
   background: #ffffff;
@@ -16,8 +17,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1.2em;
-  margin-top: 50px;
+  margin-top: 0px;
   border-radius: 10px;
+  box-shadow: 0px 0px 30px 2px ;
 }
 .container h1 {
   font-size: 1.6rem;
@@ -29,9 +31,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-label {
-  padding: 0.2rem;
-}
+
+
 label input {
   width: 100%;
   height: 33px;
@@ -48,7 +49,7 @@ label input:hover {
   cursor:pointer ;
 }
 label input:focus{
-  outline: 2px hsl(148, 81%, 25%);
+  outline: 2px hsl(120, 1%, 16%);
 }
 
 .radio-card{
@@ -127,7 +128,7 @@ p::after{
   height: 200px;
   max-height: 250px;
   border-radius: 5px;
-  resize: vertical;
+  resize: none;
   outline: none;
   cursor:pointer ;
   padding: 10px;
@@ -139,9 +140,9 @@ p::after{
 }
 .check-box-area {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  /* padding: 10px; */
+  padding: 0px 10px;
 }
 .check-box-area input {
   cursor: pointer;
@@ -175,62 +176,66 @@ p::after{
 .btn-1:active{
   background-color:  hsl(154, 33%, 27%);
 }
-.message{
+.message {
   position: fixed;
   display: none;
-  background-color: white;
-  left: 25%;
-  max-width: 50%;
-  width: 240px;
-  padding: 20px 20px;
-  margin: 10px 0px;
-  background-color:  hsl(187, 24%, 22%);
+  background-color: hsl(187, 24%, 22%);
   color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  padding: 10px 20px;
+  margin: 10px 0px;
   border-radius: 10px;
   z-index: 999;
-  
 }
-.message h3{
+
+.message.active {
+  display: block;
+  animation: appear-top 0.2s ease-in-out forwards;
+}
+
+@keyframes appear-top {
+  from {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0%) ;
+    opacity: 1;
+  }
+}
+
+.message h3 {
   display: flex;
+  justify-content: start;
   align-items: center;
-  padding-bottom: 6px;
-  font-size:1em;
-  animation: appear-top 0.5s ease-in-out forwards;
+  margin: 4px 0px;
+
 }
-.message h3 img{
-  margin-right: 5px;
-  width: 16px;
-  animation: appear-top 0.5s ease-in-out forwards;
+.message img{
+  margin-right: 10px;
 }
 .message p{
-  font-size: 0.9em;
-  animation: appear-top 0.6s ease-in-out forwards;
+  font-size: 12px;
+  margin:0px 5px;
 }
 .message.active{
   display: block;
-  animation: appear-top 0.3s ease-in-out forwards;
+  animation: appear-top 0.2s ease-out forwards;
 }
 .message.hidden{
   animation: out 0.5s ease-out forwards;
 }
-@keyframes appear-top {
-  from {
-    transform: translateY(-50%) scale(0.2) ;
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%) scale(1);
-    opacity: 1;
-  }
-}
+
 @keyframes out {
   from{
-    transform: translateY(0%) scale(1);
+    transform: translateX(-50%)   ;
     opacity: 1;
     
   }
   to{
-    transform: translateY(-50%) scale(0.2);
+    transform:translateX(-50%) translateY(-50%);
     opacity: 0;
     display: none;
   }
@@ -241,7 +246,45 @@ span{
   font-size: 12px;
   visibility: hidden;
 }
-:root {
-  --error-border: 1px solid rgb(255, 0, 0);
-  --default-border: 1px solid rgb(40, 40, 40);
+
+@media (min-width:760px) {
+
+
+  .container{
+    width: 500px;
+  }
+  .container h1{
+    font-size: 2rem;
+  }
+  .name-section{
+    display: flex;
+    justify-content: space-between
+  ;
+  }
+  .name-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 200px;
+    
+  }
+  input{
+    
+    font-size: 1.0005rem;
+  }
+  .radio-card{
+  flex-direction: row;
+  justify-content: space-between;
+}
+.radio-card label{
+  width: 210px;
+  padding: 10px 20px 10px 44px;
+}
+#txt-area{
+  height: 100px;
+}
+.message{
+  width: 440px;
+}
+
 }

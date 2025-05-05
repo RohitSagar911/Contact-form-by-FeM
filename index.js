@@ -81,11 +81,13 @@ form.addEventListener("submit", (e) => {
   // If valid, show success message
   if (isValid) {
     successMessage.classList.toggle("active");
-    form.reset();
+    setTimeout(() =>{
+      form.reset();
+    },250)
 
     // Hide success message after 2.5 seconds
     setTimeout(() => {
-      successMessage.classList.toggle("active");
+      successMessage.classList.toggle("hidden");
     }, 2500);
   }
 });

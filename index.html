@@ -22,16 +22,20 @@
     <h1>Contact Us</h1>
     <form id="form" action="" class="contct-frm">
       <!-- name -->
-      <label for="fname">
+    <div class="name-section">
+
+      <label for="fname" class="name-label">
         <p id="fname-label">First Name</p>
         <input type="text" name="firstName" id="fname">
+        <span class="form-error">This field is required</span>
       </label>
-      <span class="form-error">This field is required</span>
+      <label for="fname" class="name-label">
       <label for="lname">
         <p id="lname-label">Last Name</p>
         <input type="text" name="LastName" id="lname">
+        <span class="form-error">This field is required</span>
       </label>
-      <span class="form-error">This field is required</span>
+    </div>
       <!--email -->
       <label for="email">
         <p id="email-label">Email</p>
@@ -54,6 +58,8 @@
 
       <textarea type="text" id="txt-area" name="query"></textarea>
       <span class="form-error">This field is required</span>
+
+      <!-- checkbox -->
       <div class="check-box-area">
 
 
